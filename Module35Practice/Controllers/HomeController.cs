@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Module35Practice.Models;
+using Module35Practice.ViewModels.Account;
 using System.Diagnostics;
 
 namespace Module35Practice.Controllers
@@ -13,11 +14,14 @@ namespace Module35Practice.Controllers
             _logger = logger;
         }
 
+        [Route("")]
+        [Route("[controller]/[action]")]
         public IActionResult Index()
         {
-            return View();
+            return View(new MainViewModel());
         }
 
+        [Route("[action]")]
         public IActionResult Privacy()
         {
             return View();
