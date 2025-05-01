@@ -35,7 +35,6 @@ public class FriendRepository : Repository<Friend>
         return friends.ToList();
     }
 
-
     public void DeleteFriend(User target, User Friend)
     {
         var friends = Set.AsEnumerable().FirstOrDefault(x => x.UserId == target.Id && x.CurrentFriendId == Friend.Id);

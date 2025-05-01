@@ -11,7 +11,7 @@ public class UnitOfWork : IUnitOfWork
 
     public UnitOfWork(AppContext app)
     {
-        this._appContext = app;
+        _appContext = app;
     }
 
     public void Dispose()
